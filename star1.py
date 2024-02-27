@@ -43,7 +43,7 @@ FLAGS, FLAGS_DEF = define_flags_with_default(
     jax_distributed=JaxDistributedConfig.get_default_config(),
 ) 
 
-
+#wtf???
 class LLMNeedleHaystackTester:
     OURS_TEMPLATE = "You are a helpful assistant. USER: {context} {question} Don't give information outside the document or repeat your findings. Keep your response short and direct. ASSISTANT: "
     RANDOM_NEEDLE_CITIES  = [
