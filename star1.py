@@ -100,7 +100,7 @@ class LLMNeedleHaystackTester:
             self.document_depth_percents = [self.logistic(x) for x in np.linspace(document_depth_percent_min, document_depth_percent_max, document_depth_percent_intervals)]
         else:
             raise ValueError(f"Unsupported document_depth_percent_interval_type: {document_depth_percent_interval_type}")
-
+       #!self model
         self.model = Sampler()
 
         self.enc = LLaMAConfig.get_tokenizer(FLAGS.tokenizer)
