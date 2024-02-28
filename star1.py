@@ -110,7 +110,7 @@ class LLMNeedleHaystackTester:
         lower_bound = 10**(num_digits - 1)
         upper_bound = 10**num_digits - 1
         return random.randint(lower_bound, upper_bound)
-
+   #logist!
     def logistic(self, x, L=100, x0=50, k=.1):
         if x == 0:
             return 0
