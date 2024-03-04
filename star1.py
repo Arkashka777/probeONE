@@ -32,7 +32,17 @@ FLAGS, FLAGS_DEF = define_flags_with_default(
     n_document_depth_intervals=3,
     n_rounds=2,
     seed=1234,
+    mesh_dim='1,-1,1,
+     seed=1234,
     mesh_dim='1,-1,1,1',
+    dtype='fp32',
+    load_llama_config='',
+    update_llama_config='',
+    load_checkpoint='',
+    tokenizer=LLaMAConfig.get_tokenizer_config(),
+    checkpointer=StreamingCheckpointer.get_default_config(),
+    llama=LLaMAConfig.get_default_config(),
+    jax_distributed=JaxDistributedConfig.get_default_config(),1',
     dtype='fp32',
     load_llama_config='',
     update_llama_config='',
@@ -117,7 +127,11 @@ class LLMNeedleHaystackTester:
         if x == 100:
             return 100
         return np.round(L / (1 + np.exp(-k * (x - x0))), 3)
-
+  return random.randint(lower_bound, upper_bound)
+   #logist!
+    def logistic(self, x, L=100, x0=50, k=.1):
+        if x == 0:
+            return 0
     def read_context_files(self, n):
         max_context_length = max(self.context_lengths)
         contexts = []
