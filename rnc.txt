@@ -11,7 +11,8 @@ command lines:
                 history             //comand lines tiped
                 !numberfromhistory  //exec the line from history
                 whatis  ...         //short description of the command
-                apropos  ...        //search for command related to ...
+                apropos  ...        //search for command related to file .git           //what kind of file
+                locate ....         //sear ...
                 find ...            //find
                 printf > xxx.txt    //writes in file
                 echo   > xxx.txt    //writes in file
