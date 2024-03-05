@@ -39,6 +39,8 @@ FLAGS, FLAGS_DEF = define_flags_with_default(
     dtype='fp32',
     load_llama_config='',
     update_llama_config='',
+ context_lengths_min=1000,
+    context_lengths_max=32000,
     load_checkpoint='',
     tokenizer=LLaMAConfig.get_tokenizer_config(),
     checkpointer=StreamingCheckpointer.get_default_config(),
@@ -54,7 +56,7 @@ FLAGS, FLAGS_DEF = define_flags_with_default(
     jax_distributed=JaxDistributedConfig.get_default_config(),
 ) 
 
-#wtf??? check it
+#wtf??? check it  66
 class LLMNeedleHaystackTester:
     OURS_TEMPLATE = "You are a helpful assistant. USER: {context} {question} Don't give information outside the document or repeat your findings. Keep your response short and direct. ASSISTANT: "
     RANDOM_NEEDLE_CITIES  = [
