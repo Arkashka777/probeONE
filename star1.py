@@ -1,15 +1,10 @@
 from absl.app import run
 import time
 import json
-import math
+import gcsfs
 import os
 from tqdm import tqdm
-import random
-from functools import cached_property
-import numpy as np
-import jax
-from jax.experimental.pjit import pjit
-from jax.sharding import PartitionSpec as PS
+Spec as PS
 import gcsfs
 #iopt gulivagna s
 import tiktoken
